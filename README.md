@@ -30,10 +30,3 @@
 
 ---
 
-## 🌟 Motivation
-- “Consistency beats talent when talent doesn’t practice.”  
-- Every snippet, every exercise counts.  
-- Sharing progress here to **stay accountable**.  
-
----
-
