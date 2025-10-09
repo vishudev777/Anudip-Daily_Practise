@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class SmallestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("How many numbers do you want to enter? ");
+        int n = sc.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Please enter a positive number of elements.");
+            return;
+        }
+
+        System.out.println("Enter " + n + " numbers:");
+
+        // Read the first number and assume it is the smallest
+        int smallest = sc.nextInt();
+
+        // Compare remaining numbers
+        for (int i = 1; i < n; i++) {
+            int num = sc.nextInt();
+            if (num < smallest) {
+                smallest = num;
+            }
+        }
+
+        System.out.println("The smallest number is: " + smallest);
+        sc.close();
+    }
+}
