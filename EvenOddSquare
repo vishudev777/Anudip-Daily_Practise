@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class EvenOddSquare {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("please enter a number: ");
+		
+	    try {
+	        	int num = sc.nextInt();
+	        	if(num%2==0) {
+				System.out.println("Yes " + num + "  is a even number and its square is "+ num*num);
+			}
+			else {
+					System.out.println("num "+num+ " is not an even number but an Odd number");
+			}
+	    } catch(Exception e) {
+	   System.out.println("Invalid input! Please enter a valid number, not a letter or special symbol.");
+	    }
+	}
+}
