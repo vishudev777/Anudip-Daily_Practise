@@ -9,12 +9,12 @@ public class SmallestNumber {
 
         if (n <= 0) {
             System.out.println("Please enter a positive number of elements.");
-            return;
+            return; //Ending programm if true
         }
 
         System.out.println("Enter " + n + " numbers:");
 
-        // Read the first number and assume it is the smallest
+        // assume it is the smallest
         int smallest = sc.nextInt();
 
         // Compare remaining numbers
