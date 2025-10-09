@@ -22,7 +22,7 @@ public class MyATM {
             case 2:
                 System.out.print("Enter amount to deposit: ");
                 double deposit = sc.nextDouble();
-                balance += deposit;
+                balance += deposit;  //using assignment operator
                 System.out.println("Deposited $" + deposit);
                 System.out.println("New balance: $" + balance);
                 break;
