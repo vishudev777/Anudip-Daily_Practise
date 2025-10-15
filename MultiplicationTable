@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the number to print its multiplication table: ");
+    int num = sc.nextInt();
+    System.out.print("Enter how far the table should go: ");
+    int till = sc.nextInt();
+    
+      if (num <= 0 || till <= 0) {
+            System.out.println("Please enter positive numbers only."); // using Input Validation 
+            sc.close();
+            return;
+        }
+        
+         System.out.println("\nMultiplication Table of " + num + ":\n");
+    
+    for(int i=1; i<=till; i++){
+        System.out.println(num + " x "+ i +" = "+ num*i); //printing of table
+    }
+    sc.close(); 
+    }
+}
