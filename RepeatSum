@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class RepeatSum {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String choice;
+
+		do {
+			System.out.print("\nEnter the number to print its Sum: ");
+			int num = sc.nextInt();
+			int sum = 0;
+
+			for(int i=num; i>=1; i--) {
+				sum = sum + i;
+			}
+			System.out.println("sum is : " + sum);
+
+			System.out.print("\nwant to do sum again ?(yes/no) : ");
+			choice = sc.next().toLowerCase();
+
+		} while(choice.equals("yes") || choice.equals("y"));
+		System.out.println("\nThank you, Goodbye!"); // runs only when loop ends
+
+		sc.close();
+	}
+}
