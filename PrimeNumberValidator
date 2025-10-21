@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class PrimeNumberValidator {
+	static int i;
+	static int num;
+	static String choice;
+	static boolean isPrime;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		do {
+			System.out.print("\nEnter a number to Check if its Prime or Not : ");
+			num = sc.nextInt();
+
+			isPrime = true;
+
+			if (num <= 1) {
+				isPrime = false;
+			} else {
+				for (i = 2; i <= num / 2; i++) {
+					if (num % i == 0) {
+						isPrime = false;
+						break;
+					}
+				}
+			}
+
+			if (isPrime) {
+				System.out.println("\nYupp, "+ num + " is a prime number\n");
+			} else {
+				System.out.println("\nWell, " + num + " is not a prime number\n");
+			}
+
+			System.out.print("Do you want to run again (y/n) : ");
+
+			choice = sc.next().toLowerCase();
+		} while (choice.equals("y") || choice.equals("yes"));
+		
+		System.out.print("\nThank you, Have a Nice day !!");
+
+	}
+}
