@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+public class DeliveryApp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int mainChoice;
+        int optionChoice;
+        double totalBill = 0;
+        char again;
+
+        do {
+            System.out.println("====== ONLINE DELIVERY MENU ======");
+            System.out.println("1. Pizza");
+            System.out.println("2. Burger");
+            System.out.println("3. Ice Cream");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            mainChoice = sc.nextInt();
+
+            double price = 0;
+
+            switch (mainChoice) {
+                case 1:
+                    System.out.println("You selected Pizza.");
+                    System.out.println("Choose your flavour:");
+                    System.out.println("1. Spicy - Rs.250");
+                    System.out.println("2. Cheesy - Rs.300");
+                    System.out.print("Enter choice: ");
+                    optionChoice = sc.nextInt();
+                    if (optionChoice == 1)
+                        price = 250;
+                    else if (optionChoice == 2)
+                        price = 300;
+                    else
+                        System.out.println("Invalid flavour option!");
+                    break;
+
+                case 2:
+                    System.out.println("You selected Burger.");
+                    System.out.println("Choose your type:");
+                    System.out.println("1. Normal - Rs.100");
+                    System.out.println("2. Extra Spicy - Rs.120");
+                    System.out.print("Enter choice: ");
+                    optionChoice = sc.nextInt();
+                    if (optionChoice == 1)
+                        price = 100;
+                    else if (optionChoice == 2)
+                        price = 120;
+                    else
+                        System.out.println("Invalid option!");
+                    break;
+
+                case 3:
+                    System.out.println("You selected Ice Cream.");
+                    System.out.println("Choose your flavour:");
+                    System.out.println("1. Chocolate - Rs.80");
+                    System.out.println("2. Strawberry - Rs.90");
+                    System.out.print("Enter choice: ");
+                    optionChoice = sc.nextInt();
+                    if (optionChoice == 1)
+                        price = 80;
+                    else if (optionChoice == 2)
+                        price = 90;
+                    else
+                        System.out.println("Invalid option!");
+                    break;
+
+                case 4:
+                    System.out.println("Thank you for visiting!");
+                    return; //whole program execution will exit means THE END OF MOVIE.
+
+                default:
+                    System.out.println("Invalid main menu choice!");
+                    break;
+            }f
+
+            if (price > 0) {
+                totalBill += price;
+                System.out.println("Item added! Current total: Rs." + totalBill);
+            }
+
+            System.out.print("\nDo you want to order again? (y/n): ");
+            again = sc.next().charAt(0);
+
+        } while (again == 'y' || again == 'Y');
+
+        System.out.println("\n====== FINAL BILL ======");
+        System.out.println("Total Amount: Rs." + totalBill);
+        System.out.println("Thank you for ordering with us! 😊");
+
+        sc.close();
+    }
+}
